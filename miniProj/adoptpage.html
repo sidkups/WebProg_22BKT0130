@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width" charset="utf-8">
+        <title>Congrats!</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="datasaver.js"></script>
+        <script lang="js">
+            const queryString = window.location.search;
+            console.log(queryString);
+            const urlParams = new URLSearchParams(queryString);
+            const petName = urlParams.get('petname');
+            console.log(petName);
+            const petImg = urlParams.get('petimg');
+            console.log(petImg);
+            function setValues() {
+                document.getElementById("adoptimg").src = "images/" + petImg;
+                document.getElementById("adopttext").textContent = "Congrats! You have adopted " + petName + "!";
+            }
+        </script>
+    </head>
+    <body onload="setValues()">
+        <a href="mainpage.html"><h1>Kuppaws Adoption: For All Your Furry Needs</h1></a>
+        <h2>You've added a new furry friend to your loving home!</h2>
+        <div class="petinfo">
+            <img id="adoptimg" width="180px" class="center" alt="adopted pet"> <br>
+            <p id="adopttext"></p>
+        </div>
+        
+        <div class="infobar">
+            <h2 style="background-color: blanchedalmond;">Sections:</h2>
+            <a href="loginpage.html"><p id="logincheck">Login</p></a> <br>
+            <a href="signuppage.html"><p id="signupcheck">Sign Up</p></a>
+        </div>
+    </body>
+</html>

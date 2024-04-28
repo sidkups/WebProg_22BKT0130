@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width" charset="utf-8">
+        <title>Kuppaws Adoption: Log In</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="datasaver.js"></script>
+    </head>
+    <body>  
+        <a href="mainpage.html"><h1>Kuppaws Adoption: For All Your Furry Needs</h1></a> 
+        <h2>Log in to add new furry members to your family!</h2>
+        <form>
+            <div class="container"> 
+                <label>Username : </label> <br>
+                <input class="center" type="text" placeholder="Enter Username" name="username" id="username" required> <br>
+                <label>Password : </label>  <br>
+                <input class="center" type="password" placeholder="Enter Password" name="password" id="password" required> <br>
+                <button class="center" type="button" onclick="checkData()">Login</button> <br>
+                <a href="mainpage.html"><button class="center" type="button"> Cancel</button></a> <br>
+                <p style="color: red; font-style: italic;" id="badresult"></p>
+                <p style="color: green; font-style: italic;" id="goodresult"></p>
+            </div> 
+        </form>   
+    </body>   
+</html>
